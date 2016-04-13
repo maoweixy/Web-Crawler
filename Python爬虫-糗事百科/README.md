@@ -3,10 +3,13 @@
 
 **项目内容：**
 用Python写的糗事百科的网络爬虫。
+
 **程序功能：**
 在命令提示行中浏览糗事百科。
+
 **原理解释：**
 首先我们确定好页面的URL是 http://www.qiushibaike.com/hot/page/1，其中最后一个数字1代表页数，我们可以传入不同的值来获得某一页的段子内容。
+
 **代码分析：**
 
  1. 42-44：正则表达式在这里稍作说明
@@ -22,12 +25,14 @@
 
  3. 71-80：要注意当在pageStories循环里面，即使pageStories改变了，打印出来的还是pageStories原来的值。
 	比如：
-	p = [["mao","wei"],["xiong","yu"]]
-	for item in p:
-	    p = [["haha","hehe"]]
-	    print item[0],item[1]
+	
 
-	result:    
-	 mao wei
-	 xiong yu
+    p = [["mao","wei"],["xiong","yu"]]
+    	for item in p:
+    	    p = [["haha","hehe"]]
+    	    print item[0],item[1]
+    
+    	result:    
+    	 mao wei
+    	 xiong yu
 	所以loadPage并不会对当前的输出结果造成影响，但刚开始的确会调用loadPage，因为self.stories<2，这也是为什么刚开始运行要慢一些，因为调用getPageItems会爬取页面数据，需要时间，而后面self.stories不小于2，所以不会爬取数据
