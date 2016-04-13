@@ -27,12 +27,12 @@
 	比如：
 	
 
-    p = [["mao","wei"],["xiong","yu"]]
+        p = [["mao","wei"],["xiong","yu"]]
     	for item in p:
     	    p = [["haha","hehe"]]
     	    print item[0],item[1]
     
-    	result:    
+       	result:    
     	 mao wei
     	 xiong yu
 	所以loadPage并不会对当前的输出结果造成影响，但刚开始的确会调用loadPage，因为self.stories<2，这也是为什么刚开始运行要慢一些，因为调用getPageItems会爬取页面数据，需要时间，而后面self.stories不小于2，所以不会爬取数据
