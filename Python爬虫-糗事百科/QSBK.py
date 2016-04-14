@@ -72,7 +72,7 @@ class QSBK:
                 # 等待用户输入
                 input = raw_input()
                 # 每当输入回车一次，判断一下是否要加载新页面
-                self.loadPage()
+                thread.start_new_thread(self.loadPage,())
                 # 如果输入Q则程序结束
                 if input == "Q":
                     self.enable = False
