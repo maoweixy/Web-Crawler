@@ -41,8 +41,8 @@ class HBJJ:
         # 建立登陆界面URL的header的data
         self.postData = urllib.urlencode({
             '__VIEWSTATE': 'dDwyODE2NTM0OTg7Oz76KAIzEOLDS5fWN9NIrqLdruD9ag==',
-            'txtUserName': 13150122,
-            'TextBox2': 'maowei123',
+            'txtUserName': '用户名',
+            'TextBox2': '密码',
             'txtSecretCode': SecretCode,
             'RadioButtonList1': '学生',
             'Button1': '',
